@@ -9,9 +9,9 @@ app.use(express.static(publicFolderPath));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => 
-   console.log('Servidor funcionando en puerto ' + PORT));
+const PORT_APP = process.env.PORT || 3000;
+app.listen(PORT_APP, () => 
+   console.log('Servidor funcionando en puerto ' + PORT_APP));
 
 app.get('/', (req, res) => {
    res.sendFile(path.resolve('views/home.html'));
