@@ -137,6 +137,7 @@ body {
 .off {
    flex-grow: 0.7;
    color: #39b54a;
+   font-size: 16px;
    margin-top: 10px;
 }
 
