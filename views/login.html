@@ -6,23 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <form method="post" action="/">
-        <div>
-            <label for="userName">Nombre de usuario</label>
-            <input type="text" name="fullName" id="userName">
+    <header class="header">
+        <div class="header-top-bar">
+            <div class="logo">
+                <img src="/images/logo-mercado-liebre.svg" />
+            </div>
+            <div class="search-bar">
+                <input class="placeholder" type="text" placeholder="Buscar productos, marcas" />
+                <i class="fas fa-search"></i>
+            </div>
         </div>
-        <div>
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password">
+        <nav class="nav-bar">
+            <ul class="nav-bar-list-product">
+                <li><a href="ofertas.html" class="nav-bar-item">Ofertas</a></li>
+                <li><a href="tiendas.html" class="nav-bar-item">Tiendas oficiales</a></li>
+                <li><a href="vender.html" class="nav-bar-item">Vender</a></li>
+                <li><a href="ayuda.html" class="nav-bar-item">Ayuda</a></li>
+            </ul>
+            <ul class="nav-bar-list-user">
+                <li><a href="register.html" class="nav-bar-item">Creá tu cuenta</a> <i class="far fa-id-card"></i></li>
+                <li><a href="login.html" class="nav-bar-item">Ingresá</a> <i class="fas fa-sign-out-alt"></i></li>
+                <li>
+                    <a href="compras.html" class="nav-bar-item">Mis compras</a> <i class='fas fa-shopping-cart'></i></i>
+                </li>
+            </ul>
+        </nav>
+        <div class="subtitle-container">
+            <i class="fas fa-hand-holding-usd"></i>
+            <h2 class="subtitle">Comprá en cuotas y sin tarjeta de crédito</h2>
         </div>
-        <div>
-            <button type="button"> Entrar </button>
-        </div>
+        <a href="#" class="burger-menu">
+            <i class='fas fa-bars'></i>
+        </a>
+    </header>
+    <div class="register-body">
+        <form class="register-form" method="post" action="/">
+            <div>
+                <input class="register-placeholder" type="text" placeholder="Nombre de usuario" name="fullName"
+                    id="userName" minlength="5">
+            </div>
+            <div>
+                <input class="register-placeholder" type="password" placeholder="Contraseña" name="password"
+                    id="password" minlength="8">
+            </div>
+            <div>
+                <button class="register-button" type="button"> Entrar </button>
+            </div>
 
-    </form>
+        </form>
+    </div>
 
 </body>
 
