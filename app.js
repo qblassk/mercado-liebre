@@ -9,7 +9,7 @@ app.use(express.static(publicFolderPath));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-const PORT_APP = process.env.PORT || 3000;
+const PORT_APP = process.env.PORT || 3005;
 app.listen(PORT_APP, () => 
    console.log('Servidor funcionando en puerto ' + PORT_APP));
 
@@ -22,7 +22,7 @@ app.get('/register.html', (req, res) => {
 });
 
 app.get('/login.html', (req, res) => {
-   res.sendFile(path.resolve('views/register.html'));
+   res.sendFile(path.resolve('views/login.html'));
 });
 
 app.post('/', (req, res) => {

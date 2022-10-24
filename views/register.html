@@ -6,54 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
 
-<body>
-    <form method="post" action="/">
+<body class="register-body">
+    <form class="register-form" method="post" action="/">
         <div>
-            <label for="fullName">Nombre y apellido</label>
-            <input type="text" name="fullName" id="fullName">
+            <input class="register-placeholder" type="text" placeholder="Nombre y Apellido" name="fullName"
+                id="fullName" minlength="7">
         </div>
         <div>
-            <label for="userName">Nombre de usuario</label>
-            <input type="text" name="fullName" id="userName">
+            <input class="register-placeholder" type="text" placeholder="Nombre de usuario" name="fullName"
+                id="userName" minlength="5">
         </div>
         <div>
-            <label for="birthDate">Fecha de cumpleaños</label>
-            <input type="date" name="birthDate" id="birthDate">
+            <label class="register-label" for="birthDate">Fecha de nacimiento</label>
+            <input class="register-placeholder" type="date" name="birthDate" id="birthDate">
         </div>
         <div>
-            <label for="domicilio">Domicilio</label>
-            <input type="text" name="fullName" id="userName">
+            <input class="register-placeholder" type="text" placeholder="Domicilio" name="fullName" id="userName"
+                minlength="7">
         </div>
         <div>
-            <p>Elija tipo de usuario</p>
-            <label>Comprador<input type="radio" name="userType" value="buyer"></label>
-            <label>Vendedor<input type="radio" name="userType" value="seller"></label>
+            <p class="register-label">Elija tipo de usuario</p>
+            <div class="register-label-options">
+                <label><input type="radio" name="userType" value="buyer"> Comprador</label>
+                <label><input type="radio" name="userType" value="seller"> Vendedor</label>
+            </div>
         </div>
         <div>
-            <p>Elija categorías de interés</p>
-            <label>Electro<input type="checkbox" name="categories" value="electro"></label>
-            <label>Moda<input type="checkbox" name="categories" value="moda"></label>
-            <label>Hogar<input type="checkbox" name="categories" value="hogar"></label>
-            <label>Jugutería<input type="checkbox" name="categories" value="jugueteria"></label>
-            <label>Vida Sana<input type="checkbox" name="categories" value="vidaSana"></label>
+            <p class="register-label">Elija categorías de interés</p>
+            <div class="register-label-options"><label><input type="checkbox" name="categories" value="electro">
+                    Electro</label>
+            </div><br>
+            <div class="register-label-options"><label><input type="checkbox" name="categories" value="moda">
+                    Moda</label>
+            </div><br>
+            <div class="register-label-options"><label><input type="checkbox" name="categories" value="hogar">
+                    Hogar</label></div><br>
+            <div class="register-label-options"><label><input type="checkbox" name="categories" value="jugueteria">
+                    Jugutería</label></div><br>
+            <div class="register-label-options"><label><input type="checkbox" name="categories" value="vidaSana"> Vida
+                    Sana</label></div><br>
         </div>
         <div>
-            <label for="profilePhoto">Foto de usuario</label>
-            <input type="file" accept=".jpg, .png, .jpeg" name="profilePhoto" id="profilePhoto">
+            <p class="register-label">Foto de usuario</p><br>
+            <div class="register-label-options">
+                <input type="file" accept=".jpg, .png, .jpeg" name="profilePhoto" id="profilePhoto">
+            </div>
         </div>
         <div>
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password">
+            <input class="register-placeholder" type="password" placeholder="Contraseña" name="password" id="password"
+                minlength="8">
         </div>
         <div>
-            <label for="confirmPassword">Confirmar contraseña</label>
-            <input type="password" name="confirmPassword" id="confirmPassword">
+            <input class="register-placeholder" type="password" placeholder="Confirmar contraseña"
+                name="confirmPassword" id="confirmPassword" minlength="8">
         </div>
         <div>
-            <button type="submit"> Enviar </button>
-            <button type="reset"> Limpiar formulario </button>
+            <button class="register-button" type="submit"> Enviar </button>
+            <button class="register-button" type="reset"> Limpiar formulario </button>
         </div>
     </form>
 </body>
